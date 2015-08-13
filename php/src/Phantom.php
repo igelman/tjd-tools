@@ -30,6 +30,7 @@ class Phantom {
 
     private function sendRequest() {
         $client = Client::getInstance();
+        $client->setBinDir('../bin');
         $request = $client->getMessageFactory()->createRequest($this->url);
         $response = $client->getMessageFactory()->createResponse();
         $client->send($request, $response);

@@ -23,7 +23,7 @@ class PhantomTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testGetPageReturnsHtml() {
-        $this->assertTrue(strpos($this->phantom->getResponseHtml(),"This is a test html file."));
+        $this->assertTrue(strpos($this->phantom->getResponseHtml(),"This is a test html file.") > 0);
 
     }
 }

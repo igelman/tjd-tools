@@ -11,7 +11,8 @@
   ],
   "require": {
     "jonnyw/php-phantomjs": "3.*",
-    "phpunit/phpunit": "4.8.*"
+    "phpunit/phpunit": "4.8.*",
+    "voku/simple_html_dom": "^1.6"
   },
   "config": {
     "bin-dir": "bin"

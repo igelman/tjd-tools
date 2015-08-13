@@ -28,6 +28,8 @@
       <excludeFolder url="file://$MODULE_DIR$/php/vendor/symfony/filesystem" />
       <excludeFolder url="file://$MODULE_DIR$/php/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/php/vendor/twig/twig" />
+      <excludeFolder url="file://$MODULE_DIR$/php/vendor/voku/portable-utf8" />
+      <excludeFolder url="file://$MODULE_DIR$/php/vendor/voku/simple_html_dom" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -60,8 +62,10 @@
           <root url="file://$MODULE_DIR$/php/vendor/phpspec/prophecy" />
           <root url="file://$MODULE_DIR$/php/vendor/doctrine/instantiator" />
           <root url="file://$MODULE_DIR$/php/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/php/vendor/voku/portable-utf8" />
           <root url="file://$MODULE_DIR$/php/vendor/sebastian/environment" />
           <root url="file://$MODULE_DIR$/php/vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/php/vendor/voku/simple_html_dom" />
           <root url="file://$MODULE_DIR$/php/vendor/phpunit/phpunit" />
           <root url="file://$MODULE_DIR$/php/vendor/symfony/config" />
           <root url="file://$MODULE_DIR$/php/vendor/jakoch/phantomjs" />
@@ -88,8 +92,10 @@
           <root url="file://$MODULE_DIR$/php/vendor/phpspec/prophecy" />
           <root url="file://$MODULE_DIR$/php/vendor/doctrine/instantiator" />
           <root url="file://$MODULE_DIR$/php/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/php/vendor/voku/portable-utf8" />
           <root url="file://$MODULE_DIR$/php/vendor/sebastian/environment" />
           <root url="file://$MODULE_DIR$/php/vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/php/vendor/voku/simple_html_dom" />
           <root url="file://$MODULE_DIR$/php/vendor/phpunit/phpunit" />
           <root url="file://$MODULE_DIR$/php/vendor/symfony/config" />
           <root url="file://$MODULE_DIR$/php/vendor/jakoch/phantomjs" />

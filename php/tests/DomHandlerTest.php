@@ -20,8 +20,9 @@ HTML;
         $this->domHandler = new DomHandler($this->str);
     }
 
-    public function testConstructor() {
+    public function testConstructorCreatesDomObject() {
         $this->assertInstanceOf("DomHandler", $this->domHandler);
+        $this->assertTrue(strpos(get_class($this->domHandler->getDom()),"SimpleHtmlDom") > 0);
     }
 
 }

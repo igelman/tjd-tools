@@ -5,7 +5,7 @@
  * Date: 8/13/15
  * Time: 12:17 AM
  */
-
+// MAMP needs to be running so url (localhost:8888/tjd-tools/test-html.html) is available
 require '../vendor/autoload.php';
 echo "hello";
 class PhantomTest extends PHPUnit_Framework_TestCase {
@@ -24,6 +24,5 @@ class PhantomTest extends PHPUnit_Framework_TestCase {
 
     public function testGetPageReturnsHtml() {
         $this->assertTrue(strpos($this->phantom->getResponseHtml(),"This is a test html file.") > 0);
-
     }
 }

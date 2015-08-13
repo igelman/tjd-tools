@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+php/vendor/composer
+php/vendor/doctrine
+php/vendor/jonnyw
+php/vendor/phpspec
+php/vendor/twig
+php/vendor/sebastian
+php/vendor/phpdocumentor
+php/vendor/jakoch
+php/vendor/phpunit
+php/vendor/symfony

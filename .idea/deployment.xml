@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" uploadOnCheckin="aecd0e7e-8127-4c19-a27d-05ef6e6d8a8c">
+    <serverData>
+      <paths name="localhost:8888">
+        <serverdata>
+          <mappings>
+            <mapping deploy="tjd-tools" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myUploadOnCheckinName" value="localhost:8888" />
+  </component>
+</project>

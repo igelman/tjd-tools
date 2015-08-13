@@ -7,7 +7,7 @@
  */
 // MAMP needs to be running so url (localhost:8888/tjd-tools/test-html.html) is available
 require '../vendor/autoload.php';
-echo "hello";
+
 class PhantomTest extends PHPUnit_Framework_TestCase {
     public function setUp() {
         $this->url = "http://localhost:8888/tjd-tools/test-html.html";

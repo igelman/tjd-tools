@@ -24,5 +24,9 @@ class PhantomTest extends PHPUnit_Framework_TestCase {
 
     public function testGetPageReturnsHtml() {
         $this->assertTrue(strpos($this->phantom->getResponseHtml(),"This is a test html file.") > 0);
+//        echo getcwd() . PHP_EOL;
+//        $processUser = posix_getpwuid(posix_geteuid());
+//        echo $processUser['name'];
+//        file_put_contents("./data/dealnews.htm", $this->phantom->getResponseHtml());
     }
 }

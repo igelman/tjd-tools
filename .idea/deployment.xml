@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" uploadOnCheckin="6a295a0c-ed9a-4834-8b0b-7cb32f06fc98">
-    <option name="myUploadOnCheckinName" value="MAMP localhost" />
+  <component name="PublishConfigData" uploadOnCheckin="aecd0e7e-8127-4c19-a27d-05ef6e6d8a8c">
+    <option name="myUploadOnCheckinName" value="localhost:8888" />
   </component>
 </project>

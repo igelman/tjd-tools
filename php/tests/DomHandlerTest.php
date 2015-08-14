@@ -23,6 +23,8 @@ HTML;
     public function testConstructorCreatesDomObject() {
         $this->assertInstanceOf("DomHandler", $this->domHandler);
         $this->assertTrue(strpos(get_class($this->domHandler->getDom()),"SimpleHtmlDom") > 0);
+//        echo "Dom: ";
+//        print_r($this->domHandler->getDom());
     }
 
 }

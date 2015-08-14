@@ -8,7 +8,6 @@
       <excludeFolder url="file://$MODULE_DIR$/php/vendor/jakoch/phantomjs-installer" />
       <excludeFolder url="file://$MODULE_DIR$/php/vendor/jonnyw/php-phantomjs" />
       <excludeFolder url="file://$MODULE_DIR$/php/vendor/phpdocumentor/reflection-docblock" />
-      <excludeFolder url="file://$MODULE_DIR$/php/vendor/phpspec/prophecy" />
       <excludeFolder url="file://$MODULE_DIR$/php/vendor/phpunit/php-code-coverage" />
       <excludeFolder url="file://$MODULE_DIR$/php/vendor/phpunit/php-file-iterator" />
       <excludeFolder url="file://$MODULE_DIR$/php/vendor/phpunit/php-text-template" />
@@ -37,21 +36,73 @@
       <library name="PHARS">
         <CLASSES>
           <root url="phar://$MODULE_DIR$/php/composer.phar" />
+          <root url="phar://$MODULE_DIR$/php/vendor/symfony/dependency-injection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar" />
         </CLASSES>
         <SOURCES>
           <root url="phar://$MODULE_DIR$/php/composer.phar" />
+          <root url="phar://$MODULE_DIR$/php/vendor/symfony/dependency-injection/Tests/Fixtures/includes/ProjectWithXsdExtensionInPhar.phar" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="PHP">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/php/vendor/jonnyw/php-phantomjs" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/php/vendor/jakoch/phantomjs-installer" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/exporter" />
+          <root url="file://$MODULE_DIR$/php/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/php/vendor/symfony/filesystem" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/php/vendor/doctrine/instantiator" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/php/vendor/voku/portable-utf8" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/environment" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/php/vendor/voku/simple_html_dom" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/php/vendor/symfony/config" />
           <root url="file://$MODULE_DIR$/php/vendor/jakoch/phantomjs" />
+          <root url="file://$MODULE_DIR$/php/vendor/symfony/dependency-injection" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/phpunit-mock-objects" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/global-state" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/recursion-context" />
+          <root url="file://$MODULE_DIR$/php/vendor/twig/twig" />
           <root url="file://$MODULE_DIR$/php/vendor/composer" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/comparator" />
         </CLASSES>
         <SOURCES>
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/php/vendor/jonnyw/php-phantomjs" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/php/vendor/jakoch/phantomjs-installer" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/exporter" />
+          <root url="file://$MODULE_DIR$/php/vendor/symfony/yaml" />
+          <root url="file://$MODULE_DIR$/php/vendor/symfony/filesystem" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/php/vendor/doctrine/instantiator" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/php/vendor/voku/portable-utf8" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/environment" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/php/vendor/voku/simple_html_dom" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/php/vendor/symfony/config" />
           <root url="file://$MODULE_DIR$/php/vendor/jakoch/phantomjs" />
+          <root url="file://$MODULE_DIR$/php/vendor/symfony/dependency-injection" />
+          <root url="file://$MODULE_DIR$/php/vendor/phpunit/phpunit-mock-objects" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/global-state" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/recursion-context" />
+          <root url="file://$MODULE_DIR$/php/vendor/twig/twig" />
           <root url="file://$MODULE_DIR$/php/vendor/composer" />
+          <root url="file://$MODULE_DIR$/php/vendor/sebastian/comparator" />
         </SOURCES>
       </library>
     </orderEntry>

@@ -6,20 +6,53 @@
  * Time: 7:34 PM
  */
 require '../vendor/autoload.php';
-
+require '../src/DomParser.php';
 
 class DomParserTest extends PHPUnit_Framework_TestCase {
     public function setUp() {
         $str = file_get_contents("../../test-html.html");
-        //$str = file_get_contents("./data/dealnews.htm");
-        $this->domHandler = new DomHandler($str);
-        $this->dom = $this->domHandler->getDom();
-//        echo "dom class: ";
-//        print_r(get_class($this->dom));
+        $this->articleTag = "div";
+        $this->articleAttribute = "data-type";
+        $this->articleValue = "article";
 
-        $articleIdPrefix = "content_wide_article_";
-        $articleDataType = "article";
+        $domHandler = new DomHandler($str);
+        $dom = $domHandler->getDom();
+        $this->domParser = new DomParser($dom);
+
+    }
+
+    public function testConstructorCreatesDomParserObject() {
+        $this->assertInstanceOf("DomParser", $this->domParser);
+    }
+
+    public function testGetElementsReturnsElements() {
+        $articles = $this->domParser->getElements($this->articleTag, $this->articleAttribute, $this->articleValue);
+        $this->assertEquals(1, count($articles));
+
+//        foreach($articles as $articleNode) {
+//            $articleParser = new DomParser($articleNode);
+//            $headlineTag = "h3";
+//            $headlineAttribute = "class";
+//            $headlineValue = "headline-xlarge";
+//            $headlineNode = $articleParser->getElements($headlineTag, $headlineAttribute, $headlineValue);
+//            echo "headlineNode type & count: " . gettype($headlineNode) . count($headlineNode) . PHP_EOL;
+//
+//
+//            echo "headline: " . $headlineNode[0]->plaintext . PHP_EOL;
+//            //file_put_contents("headlineNodeObject",serialize($headlineNode[0]));
+//        }
+    }
+
+    public function testGetElementPlaintext() {
+        $headlineNodeObjectSerialized = file_get_contents("headlineNodeObject");
+        $headlineNodeObject = unserialize($headlineNodeObjectSerialized);
+        echo "headline: " . $headlineNodeObject->plaintext . PHP_EOL;
+
+    }
+
 /*
+$articleIdPrefix = "content_wide_article_";
+$articleDataType = "article";
 div data-type='article' data-id
 -div.content-image
 --img.data-src
@@ -33,16 +66,8 @@ div data-type='article' data-id
 ---time.datetime
 --div.content-body
 */
-    }
 // $ret = $html->find('div[id]');
-    public function testNoting() {
+//    public function testNoting() {
 
-        $articles = $this->dom->find("div[data-type=article]", 0)->plaintext;
-        echo "articles type: " . gettype($articles) . PHP_EOL;
-        echo "articles size: " . count($articles) . PHP_EOL;
-        $string = var_dump($articles);
-        echo $string;
-//        print_r($articles);
-        $this->assertTrue(true);
-    }
+
 }

@@ -10,12 +10,18 @@ require '../src/DomParser.php';
 
 class DomParserTest extends PHPUnit_Framework_TestCase {
     public function setUp() {
-        $str = file_get_contents("../../test-html.html");
+        $htmlStr = file_get_contents("../../test-html.html");
+//        $headlineNodeObjectSerialized = file_get_contents("headlineNodeObject");
+//        $headlineNodeObject = unserialize($headlineNodeObjectSerialized);
+//        $articleNodeObjectSerialized = file_get_contents("articleNodeObject");
+//        $articleNodeObject = unserialize($articleObjectSerialized);
+
+
         $this->articleTag = "div";
         $this->articleAttribute = "data-type";
         $this->articleValue = "article";
 
-        $domHandler = new DomHandler($str);
+        $domHandler = new DomHandler($htmlStr);
         $dom = $domHandler->getDom();
         $this->domParser = new DomParser($dom);
 
@@ -27,6 +33,7 @@ class DomParserTest extends PHPUnit_Framework_TestCase {
 
     public function testGetElementsReturnsElements() {
         $articles = $this->domParser->getElements($this->articleTag, $this->articleAttribute, $this->articleValue);
+        file_put_contents("articleNodeObject",serialize($articles[0]));
         $this->assertEquals(1, count($articles));
 
 //        foreach($articles as $articleNode) {
@@ -46,6 +53,7 @@ class DomParserTest extends PHPUnit_Framework_TestCase {
     public function testGetElementPlaintext() {
         $headlineNodeObjectSerialized = file_get_contents("headlineNodeObject");
         $headlineNodeObject = unserialize($headlineNodeObjectSerialized);
+        echo "Type of headlineNodeObject: " . get_class($headlineNodeObject) . PHP_EOL;
         echo "headline: " . $headlineNodeObject->plaintext . PHP_EOL;
 
     }

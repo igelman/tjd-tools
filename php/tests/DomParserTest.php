@@ -33,6 +33,7 @@ class DomParserTest extends PHPUnit_Framework_TestCase {
         $htmlStr = file_get_contents("one-article-html.txt"/*"test-html.html"*/);
         $domHandlerOneArticle = new DomHandler($htmlStr);
         $domOneArticle = $domHandlerOneArticle->getDom();
+        $this->expectedHeadline = "Sears Refrigeration Spectacular Sale"; // Use this as expected value for assertion
         //////////////////////////////////////////
         $this->domParserOneArticle = new DomParser($domOneArticle);
 
@@ -61,6 +62,16 @@ class DomParserTest extends PHPUnit_Framework_TestCase {
 //        echo $articleArray[0]->plaintext;
         $this->assertInternalType("array",$articleArray);
         $this->assertTrue(count($articleArray) == 1);
+    }
+
+    public function testCreateADomFromANode() {
+        $articleArray = $this->domParserOneArticle->getElements($this->articleTag, $this->articleAttribute, $this->articleValue);
+        $articleDom = new DomHandler($articleArray[0]);
+        $headlineArray = $this->domParserOneArticle->getElements($this->headlineTag, $this->headlineAttribute, $this->headlineValue);
+        echo "count(\$headlineArray): " . count($headlineArray) . PHP_EOL;
+        echo $headlineArray[0]->plaintext;
+        $this->assertContains($this->expectedHeadline, $headlineArray[0]->plaintext);
+
     }
 
 //    public function testGetElementsReturnsElements() {

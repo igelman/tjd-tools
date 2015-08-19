@@ -13,11 +13,12 @@ class DomHandler {
 
     public function __construct($str)
     {
-        $this->str = $str;
-        $this->dom = voku\helper\HtmlDomParser::str_get_html($this->str);
+        $this->dom = voku\helper\HtmlDomParser::str_get_html( $str );
+
     }
 
     public function getDom() {
         return $this->dom;
     }
+
 }

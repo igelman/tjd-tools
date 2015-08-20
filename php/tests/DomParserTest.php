@@ -27,24 +27,27 @@ class DomParserTest extends PHPUnit_Framework_TestCase {
         /*****************************************************
          *  Example content.
          **  one-article-html.txt contains one article.
+         **  many-articles-html.txt contains many articles.
          **  Use DomHandler to create the dom from the file.
          */
         // Maybe a mock object for DomHandler?
-        $htmlStr = file_get_contents("one-article-html.txt"/*"test-html.html"*/);
-        $domHandlerOneArticle = new DomHandler($htmlStr);
+        $oneArticleHtmlStr = file_get_contents("one-article-html.txt"/*"test-html.html"*/);
+        $domHandlerOneArticle = new DomHandler($oneArticleHtmlStr);
         $domOneArticle = $domHandlerOneArticle->getDom();
         $this->expectedHeadline = "Sears Refrigeration Spectacular Sale"; // Use this as expected value for assertion
         //////////////////////////////////////////
         $this->domParserOneArticle = new DomParser($domOneArticle);
 
+
+
         // For testing purposes, I created a file with serialized versions
         /// of article & headline nodes.
         /// This way the test doesn't depend on DomHandler class.
-        $articleNodeObjectSerialized = file_get_contents("articleNodeObject");
-        $this->articleNodeObject = unserialize($articleNodeObjectSerialized);
+//        $articleNodeObjectSerialized = file_get_contents("articleNodeObject");
+//        $this->articleNodeObject = unserialize($articleNodeObjectSerialized);
 
-        $headlineNodeObjectSerialized = file_get_contents("headlineNodeObject");
-        $this->headlineNodeObject = unserialize($headlineNodeObjectSerialized);
+//        $headlineNodeObjectSerialized = file_get_contents("headlineNodeObject");
+//        $this->headlineNodeObject = unserialize($headlineNodeObjectSerialized);
 //        echo "Type of headlineNodeObject: " . get_class($this->headlineNodeObject) . PHP_EOL;
 //        echo "headline: " . $this->headlineNodeObject->plaintext . PHP_EOL;
 //        echo "strpos: " . strpos($this->headlineNodeObject->plaintext, "Lenovo Back to School Sale") . PHP_EOL;
@@ -69,9 +72,23 @@ class DomParserTest extends PHPUnit_Framework_TestCase {
         $articleDom = new DomHandler($articleArray[0]);
         $headlineArray = $this->domParserOneArticle->getElements($this->headlineTag, $this->headlineAttribute, $this->headlineValue);
         echo "count(\$headlineArray): " . count($headlineArray) . PHP_EOL;
-        echo $headlineArray[0]->plaintext;
+        echo $headlineArray[0]->plaintext . PHP_EOL;
         $this->assertContains($this->expectedHeadline, $headlineArray[0]->plaintext);
+    }
 
+    public function testGetElementsForManyArticles() {
+        $manyArticlesHtmlStr = file_get_contents("one-article-html.txt"); // file_get_contents("dealnews-html.txt"/*"many-articles-html.txt"*/);
+        $manyArticlesHtmlStr .= $manyArticlesHtmlStr;
+        $domHandlerManyArticles = new DomHandler($manyArticlesHtmlStr);
+        $domManyArticles = $domHandlerManyArticles->getDom();
+        //////////////////////////////////////////
+        $this->domParserManyArticles = new DomParser($domManyArticles);
+        $this->assertInstanceOf("DomParser", $this->domParserManyArticles);
+
+        $articlesArray = $this->domParserManyArticles->getElements($this->articleTag, $this->articleAttribute, $this->articleValue);
+        $this->assertInternalType("array", $articlesArray);
+        $this->assertTrue(count($articlesArray) > 1);
+        echo "count(\$articlesArray): " . count($articlesArray);
     }
 
 //    public function testGetElementsReturnsElements() {
